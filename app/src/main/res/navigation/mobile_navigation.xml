@@ -12,14 +12,24 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_my_profile"
         android:name="com.example.karabourse.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
+        android:label="my_profile"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_categury"
         android:name="com.example.karabourse.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
+        android:label="category"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/navigation_orders"
+        android:name="com.example.karabourse.ui.notifications.NotificationsFragment"
+        android:label="orders"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.example.karabourse.ui.notifications.NotificationsFragment"
+        android:label="search"
         tools:layout="@layout/fragment_notifications" />
 </navigation>
