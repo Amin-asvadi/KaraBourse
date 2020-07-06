@@ -10,6 +10,7 @@ import com.example.karabourse.ui.order.OrderFragment;
 import com.example.karabourse.ui.profile.ProfileFragment;
 import com.example.karabourse.ui.secondlyMarket.SecondlyMarketFragment;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
@@ -27,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
 		bottomNavigation = findViewById(R.id.bottom_nav);
 
 		bottomNavigation.add(new MeowBottomNavigation.Model(ID_ARROW, R.drawable.ic_up));
