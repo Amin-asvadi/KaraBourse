@@ -9,11 +9,10 @@
 
     <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="94dp"
+        android:layout_height="0dp"
         android:columnCount="4"
-        android:rowCount="1"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="4:1"
+        app:layout_constraintDimensionRatio="7:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -21,7 +20,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1">
 
@@ -44,9 +43,9 @@
                     app:srcCompat="@drawable/ic_dealy_analise" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:gravity="center"
                     android:text="بورس یار" />
 
             </LinearLayout>
@@ -79,9 +78,10 @@
                     app:srcCompat="@drawable/ic_deaties" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+
 
                     android:text="آموزش" />
 
@@ -117,7 +117,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+
                  android:gravity="center"
                     android:text="نمای بازار" />
 
@@ -153,7 +153,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+
                     android:gravity="center"
                     android:text="اخبار" />
 
