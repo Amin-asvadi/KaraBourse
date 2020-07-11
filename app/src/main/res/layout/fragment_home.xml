@@ -3,21 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#ECECEC"
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="0dp"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <include layout="@layout/layout_toolbar" />
-    </com.google.android.material.appbar.AppBarLayout>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -108,7 +97,8 @@
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_margin="20sp"
+
+        android:padding="10dp"
         android:columnCount="3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -121,9 +111,9 @@
             android:layout_height="0dp"
             android:clickable="true"
             android:layout_rowWeight="1"
+
             android:layout_columnWeight="1"
-            android:layout_margin="10dp"
-            android:background="@color/red"
+            android:layout_margin="15sp"
             app:cardCornerRadius="20sp"
             app:cardElevation="8dp">
 
@@ -167,8 +157,7 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_margin="10dp"
-            android:background="@color/red"
+            android:layout_margin="15sp"
             app:cardCornerRadius="20sp"
             app:cardElevation="8dp">
 
@@ -211,9 +200,8 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_margin="10dp"
+            android:layout_margin="15sp"
 
-            android:background="@color/red"
             app:cardCornerRadius="20sp"
             app:cardElevation="8dp">
 
@@ -258,8 +246,7 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_margin="10dp"
-            android:background="@color/red"
+            android:layout_margin="15sp"
             app:cardCornerRadius="20sp"
             app:cardElevation="8dp">
 
@@ -302,8 +289,8 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_margin="10dp"
-            android:background="@color/red"
+            android:layout_margin="15sp"
+
             app:cardCornerRadius="20sp"
             app:cardElevation="8dp">
 
@@ -346,8 +333,7 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_margin="10dp"
-            android:background="@color/red"
+            android:layout_margin="15sp"
             app:cardCornerRadius="20sp"
             app:cardElevation="8dp">
 

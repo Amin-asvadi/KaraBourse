@@ -1,6 +1,10 @@
 package com.example.karabourse;
 
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
@@ -9,14 +13,18 @@ import com.example.karabourse.ui.home.HomeFragment;
 import com.example.karabourse.ui.order.OrderFragment;
 import com.example.karabourse.ui.profile.ProfileFragment;
 import com.example.karabourse.ui.secondlyMarket.SecondlyMarketFragment;
+import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
 public class MainActivity extends AppCompatActivity {
-
+	DrawerLayout drawer;
 	MeowBottomNavigation bottomNavigation;
+	ImageView btn_drawer;
 	private final static int ID_ARROW = 1;
 	private final static int ID_ORDER = 2;
 	private final static int ID_HOME = 3;
@@ -28,13 +36,31 @@ public class MainActivity extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		bottomNavigation = findViewById(R.id.bottom_nav);
 
+		bottomNavigation = findViewById(R.id.bottom_nav);
+		drawer = findViewById(R.id.drawer_layout);
+		btn_drawer = findViewById(R.id.btn_menue);
+		NavigationView navigationView = findViewById(R.id.nav_view);
+		navigationView.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
 		bottomNavigation.add(new MeowBottomNavigation.Model(ID_ARROW, R.drawable.ic_up));
 		bottomNavigation.add(new MeowBottomNavigation.Model(ID_ORDER, R.drawable.ic_shop));
 		bottomNavigation.add(new MeowBottomNavigation.Model(ID_HOME, R.drawable.ic_home));
 		bottomNavigation.add(new MeowBottomNavigation.Model(ID_MARKET, R.drawable.ic_signal));
 		bottomNavigation.add(new MeowBottomNavigation.Model(ID_PROFILE, R.drawable.ic_profile));
+
+btn_drawer.setOnClickListener(new View.OnClickListener() {
+	@Override
+	public void onClick(View v) {
+		drawer.openDrawer(Gravity.RIGHT);
+	}
+});
+		btn_drawer.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				drawer.openDrawer(Gravity.RIGHT);
+			}
+		});
+
 
 		bottomNavigation.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
 			@Override
