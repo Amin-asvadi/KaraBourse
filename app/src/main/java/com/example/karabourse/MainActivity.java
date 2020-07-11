@@ -36,13 +36,9 @@ public class MainActivity extends AppCompatActivity {
 		bottomNavigation.add(new MeowBottomNavigation.Model(ID_MARKET, R.drawable.ic_signal));
 		bottomNavigation.add(new MeowBottomNavigation.Model(ID_PROFILE, R.drawable.ic_profile));
 
-
-		//getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment,new HomeFragment()).commit();
-
 		bottomNavigation.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
 			@Override
 			public void onClickItem(MeowBottomNavigation.Model item) {
-				Toast.makeText(getApplicationContext(), "Clicked item" + item.getId(), Toast.LENGTH_SHORT).show();
 			}
 		});
 		bottomNavigation.setOnShowListener(new MeowBottomNavigation.ShowListener() {

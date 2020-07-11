@@ -8,8 +8,11 @@
 
     <FrameLayout
         android:id="@+id/nav_host_fragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.etebarian.meowbottomnavigation.MeowBottomNavigation
@@ -18,16 +21,15 @@
 
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nav_host_fragment"
         app:mbn_backgroundBottomColor="#FFFFFF"
+        app:mbn_defaultIconColor="@color/icons_color"
         app:mbn_rippleColor="#9C27B0"
-        app:mbn_shadowColor="#097A7D"
-        app:mbn_countBackgroundColor="#ff6f00"
-        app:mbn_defaultIconColor="#EC0202"
-        app:mbn_selectedIconColor="#3c415e" />
-
+        app:mbn_selectedIconColor="@color/icons_color" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
