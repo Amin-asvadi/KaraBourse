@@ -65,6 +65,7 @@ btn_drawer.setOnClickListener(new View.OnClickListener() {
 		bottomNavigation.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
 			@Override
 			public void onClickItem(MeowBottomNavigation.Model item) {
+
 			}
 		});
 		bottomNavigation.setOnShowListener(new MeowBottomNavigation.ShowListener() {

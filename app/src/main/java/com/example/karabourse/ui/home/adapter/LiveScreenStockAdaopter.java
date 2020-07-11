@@ -45,7 +45,7 @@ private Context context;
 
 
 		ViewGroup.LayoutParams params = vh.cons_live_screen.getLayoutParams();
-		params.height = (int) ((Global.getSizeScreen(context)) / 6.5);
+		params.height = (int) ((Global.getSizeScreen(context)) / 5);
 		params.width = (int) ((Global.getSizeScreen(context)) / 4.5);
 		vh.cons_live_screen.setLayoutParams(params);
 	}

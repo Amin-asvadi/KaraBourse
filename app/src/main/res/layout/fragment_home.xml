@@ -21,7 +21,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintDimensionRatio="1.5:1"
+            app:layout_constraintDimensionRatio="1.7:1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -32,55 +32,48 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="0dp"
-                android:layout_marginTop="30dp">
+              >
 
-                <LinearLayout
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/live_screen"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-
-                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:background="#64a3a8"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/linearLayout"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.52"
+                    tools:itemCount="5" />
 
+                <LinearLayout
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/live_screen"
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+
+                    android:background="@drawable/back_dashboard_home"
+                    android:orientation="horizontal"
+                    android:weightSum="4"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.93">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="20sp"
-                        android:background="#64a3a8"
-                        android:orientation="horizontal"
-                        tools:itemCount="4" />
+                        android:layout_gravity="center">
 
-                    <LinearLayout
+                        <include layout="@layout/layout_main_dashboard" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                        android:id="@+id/linearLayout"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-
-                        android:background="@drawable/back_dashboard_home"
-
-                        android:gravity="bottom"
-                        android:orientation="horizontal"
-                        android:weightSum="4">
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center">
-
-                            <include
-                                layout="@layout/layout_main_dashboard"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    </LinearLayout>
                 </LinearLayout>
+
             </androidx.constraintlayout.widget.ConstraintLayout>
         </RelativeLayout>
 
