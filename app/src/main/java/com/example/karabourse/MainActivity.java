@@ -21,10 +21,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity {
+	@BindView(R.id.drawer_layout)
 	DrawerLayout drawer;
-	MeowBottomNavigation bottomNavigation;
+	@BindView(R.id.btn_menue)
 	ImageView btn_drawer;
+	@BindView(R.id.bottom_nav)
+	MeowBottomNavigation bottomNavigation;
+
+	/*@BindView(R.id.nav_view)
+	NavigationView navigationView;*/
+
+
 	private final static int ID_ARROW = 1;
 	private final static int ID_ORDER = 2;
 	private final static int ID_HOME = 3;
@@ -36,30 +47,19 @@ public class MainActivity extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
-		bottomNavigation = findViewById(R.id.bottom_nav);
-		drawer = findViewById(R.id.drawer_layout);
-		btn_drawer = findViewById(R.id.btn_menue);
-		NavigationView navigationView = findViewById(R.id.nav_view);
-		navigationView.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+		ButterKnife.bind(this);
+		//navigationView.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
 		bottomNavigation.add(new MeowBottomNavigation.Model(ID_ARROW, R.drawable.ic_up));
 		bottomNavigation.add(new MeowBottomNavigation.Model(ID_ORDER, R.drawable.ic_shop));
 		bottomNavigation.add(new MeowBottomNavigation.Model(ID_HOME, R.drawable.ic_home));
 		bottomNavigation.add(new MeowBottomNavigation.Model(ID_MARKET, R.drawable.ic_signal));
 		bottomNavigation.add(new MeowBottomNavigation.Model(ID_PROFILE, R.drawable.ic_profile));
-
-btn_drawer.setOnClickListener(new View.OnClickListener() {
-	@Override
-	public void onClick(View v) {
-		drawer.openDrawer(Gravity.RIGHT);
-	}
-});
-		btn_drawer.setOnClickListener(new View.OnClickListener() {
+	/*	btn_drawer.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				drawer.openDrawer(Gravity.RIGHT);
 			}
-		});
+		});*/
 
 
 		bottomNavigation.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {

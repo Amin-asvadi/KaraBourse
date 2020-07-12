@@ -22,10 +22,14 @@ import com.example.karabourse.ui.home.model.LiveScreenStockModel;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class HomeFragment extends Fragment {
 
 	LiveScreenStockAdaopter liveScreenStockAdaopter;
 	List<LiveScreenStockModel> liveScreenStockModelsItems;
+	@BindView(R.id.live_screen)
 	RecyclerView rc_Live_Screen;
 
 	private HomeViewModel homeViewModel;
@@ -35,8 +39,7 @@ public class HomeFragment extends Fragment {
 		homeViewModel =
 				ViewModelProviders.of(this).get(HomeViewModel.class);
 		View root = inflater.inflate(R.layout.fragment_home, container, false);
-
-		rc_Live_Screen = root.findViewById(R.id.live_screen);
+		ButterKnife.bind(this, root);
 
 
 		liveScreenStockModelsItems = new ArrayList<>();
