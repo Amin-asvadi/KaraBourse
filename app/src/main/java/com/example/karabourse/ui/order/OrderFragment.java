@@ -61,11 +61,13 @@ public class OrderFragment extends Fragment {
 				new ViewPagerOrderAdapter(getChildFragmentManager(), 0);
 
 
-		viewPagerOrderAdapter.addFragments(learningCourseFragment, "دوره های آموزشی");
-		viewPagerOrderAdapter.addFragments(accessoiresFragment, "ابزار");
-		viewPagerOrderAdapter.addFragments(freeProductsFragment, "محصولات رایگان");
 		viewPagerOrderAdapter.addFragments(libralyFragment, "کتابخانه");
+		viewPagerOrderAdapter.addFragments(freeProductsFragment, "محصولات رایگان");
+		viewPagerOrderAdapter.addFragments(accessoiresFragment, "ابزار");
+		viewPagerOrderAdapter.addFragments(learningCourseFragment, "دوره آموزشی");
+
 		viewPager.setAdapter(viewPagerOrderAdapter);
+		tabLayout.getTabAt(3).select();
 
 
 

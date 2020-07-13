@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -45,14 +46,9 @@ public class OrderProductAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 		vh.price.setText(String.valueOf(productModel.getPrice()));
 		vh.rate.setText(String.valueOf(productModel.getRate()));
 
-
-	/*	ViewGroup.LayoutParams params = vh.cons_product_item.getLayoutParams();
-		params.height = (int) ((Global.getSizeScreen(context)) / 4.1);
-		vh.cons_product_item.setLayoutParams(params);
-		ViewGroup.LayoutParams img_params = vh.cons_product_item.getLayoutParams();
+	ViewGroup.LayoutParams params = vh.cons_product_item.getLayoutParams();
 		params.height = (int) ((Global.getSizeScreen(context)) / 4);
-		params.width = (int) ((Global.getSizeScreen(context)) / 3.5);
-		vh.cons_product_item.setLayoutParams(params);*/
+		vh.cons_product_item.setLayoutParams(params);
 
 	}
 
@@ -67,7 +63,7 @@ class OrderProductViewHolder extends RecyclerView.ViewHolder{
 	TextView limite_of_course;
 	TextView price;
 	TextView rate;
-	ConstraintLayout cons_product_item;
+	CardView cons_product_item;
 
 
 	public OrderProductViewHolder(@NonNull View itemView) {

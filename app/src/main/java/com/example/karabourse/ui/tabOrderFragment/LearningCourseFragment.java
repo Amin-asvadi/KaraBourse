@@ -79,33 +79,33 @@ public class LearningCourseFragment extends Fragment {
 		rc_product_items = root.findViewById(R.id.rc_product);
 
 		productModelsitems = new ArrayList<>();
-		productModelsitems.add(new ProductModel(R.drawable.clip1, "آشنایی با بورس",
+		productModelsitems.add(new ProductModel(R.drawable.clip_xxx, "آشنایی با بورس",
+				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
+		productModelsitems.add(new ProductModel(R.drawable.clip2_xxx, "آشنایی با بورس",
+				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
+		productModelsitems.add(new ProductModel(R.drawable.clip3_xxx, "آشنایی با بورس",
+				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
+		productModelsitems.add(new ProductModel(R.drawable.clip4_xxx, "آشنایی با بورس",
+				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
+		productModelsitems.add(new ProductModel(R.drawable.clip_xxx, "آشنایی با بورس",
+				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
+		productModelsitems.add(new ProductModel(R.drawable.clip2_xxx, "آشنایی با بورس",
+				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
+		productModelsitems.add(new ProductModel(R.drawable.clip3_xxx, "آشنایی با بورس",
+				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
+		productModelsitems.add(new ProductModel(R.drawable.clip4_xxx, "آشنایی با بورس",
 				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
 		productModelsitems.add(new ProductModel(R.drawable.clip1, "آشنایی با بورس",
 				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
-		productModelsitems.add(new ProductModel(R.drawable.clip1, "آشنایی با بورس",
+		productModelsitems.add(new ProductModel(R.drawable.clip2_xxx, "آشنایی با بورس",
+				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
+		productModelsitems.add(new ProductModel(R.drawable.clip3_xxx, "آشنایی با بورس",
+				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
+		productModelsitems.add(new ProductModel(R.drawable.clip4_xxx, "آشنایی با بورس",
 				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
 		productModelsitems.add(new ProductModel(R.drawable.clip1, "آشنایی با بورس",
 				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
-		productModelsitems.add(new ProductModel(R.drawable.clip1, "آشنایی با بورس",
-				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
-		productModelsitems.add(new ProductModel(R.drawable.clip1, "آشنایی با بورس",
-				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
-		productModelsitems.add(new ProductModel(R.drawable.clip1, "آشنایی با بورس",
-				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
-		productModelsitems.add(new ProductModel(R.drawable.clip1, "آشنایی با بورس",
-				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
-		productModelsitems.add(new ProductModel(R.drawable.clip1, "آشنایی با بورس",
-				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
-		productModelsitems.add(new ProductModel(R.drawable.clip1, "آشنایی با بورس",
-				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
-		productModelsitems.add(new ProductModel(R.drawable.clip1, "آشنایی با بورس",
-				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
-		productModelsitems.add(new ProductModel(R.drawable.clip1, "آشنایی با بورس",
-				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
-		productModelsitems.add(new ProductModel(R.drawable.clip1, "آشنایی با بورس",
-				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
-		productModelsitems.add(new ProductModel(R.drawable.clip1, "آشنایی با بورس",
+		productModelsitems.add(new ProductModel(R.drawable.clip2_xxx, "آشنایی با بورس",
 				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
 		orderProductAdapter = new OrderProductAdapter(productModelsitems, getContext());
 		LinearLayoutManager linearLayoutMan = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
