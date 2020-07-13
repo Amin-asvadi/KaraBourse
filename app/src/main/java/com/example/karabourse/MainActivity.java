@@ -25,10 +25,10 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
-	@BindView(R.id.drawer_layout)
-	DrawerLayout drawer;
-	@BindView(R.id.btn_menue)
-	ImageView btn_drawer;
+/*	@BindView(R.id.drawer_layout)
+	DrawerLayout drawer;*/
+	/*@BindView(R.id.btn_menue)
+	ImageView btn_drawer;*/
 	@BindView(R.id.bottom_nav)
 	MeowBottomNavigation bottomNavigation;
 

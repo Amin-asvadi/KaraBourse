@@ -9,4 +9,7 @@
     <color name="red">#EC0202</color>
     <color name="orange">#ff6f00</color>
     <color name="icons_color">#FFCC64</color>
+    <color name="dark_gray">#797F80</color>
+    <color name="gray">#AFAFAF</color>
+    <color name="home_color">#ECECEC</color>
 </resources>

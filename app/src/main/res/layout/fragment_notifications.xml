@@ -5,7 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.secondlyMarket.SecondlyMarketFragment">
-
+    <include
+        android:id="@+id/include"
+        layout="@layout/layout_toolbar_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <TextView
         android:id="@+id/text_notifications"
         android:layout_width="match_parent"

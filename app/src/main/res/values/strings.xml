@@ -9,4 +9,9 @@
     <string name="profile">پیشخوان</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="whate_you_searching_for">به دنبال چه محصولی میگردید</string>
+    <string name="learning_course">دوره های آموزشی</string>
+    <string name="accessoires">ابزار</string>
+    <string name="free_products">محصولات رایگان</string>
+    <string name="librally">کتابخانه</string>
 </resources>

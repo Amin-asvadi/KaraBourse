@@ -3,11 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#ECECEC"
+    android:background="@color/home_color"
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-
+    <include
+        android:id="@+id/include"
+        layout="@layout/layout_toolbar_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cons_main"
@@ -16,12 +21,12 @@
         android:background="@drawable/ic_home_back"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+        app:layout_constraintTop_toBottomOf="@+id/include">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintDimensionRatio="1.7:1"
+            app:layout_constraintDimensionRatio="2:1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -31,8 +36,7 @@
                 android:layout_height="match_parent"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="0dp"
-              >
+                android:layout_marginStart="0dp">
 
 
                 <androidx.recyclerview.widget.RecyclerView
@@ -94,60 +98,65 @@
         app:layout_constraintTop_toBottomOf="@+id/cons_main" />
 
     <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:id="@+id/gridLayout"
+        android:layout_width="0dp"
 
-        android:padding="10dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
         android:columnCount="3"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3">
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="1.0">
 
 
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:clickable="true"
             android:layout_rowWeight="1"
-
             android:layout_columnWeight="1"
-            android:layout_margin="15sp"
+
+            android:layout_margin="10dp"
+            android:clickable="true"
             app:cardCornerRadius="20sp"
-            app:cardElevation="8dp">
+            app:cardElevation="6dp">
 
-          <androidx.constraintlayout.widget.ConstraintLayout
-              android:layout_width="match_parent"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
 
-              android:layout_height="match_parent">
+                android:layout_height="match_parent">
 
-              <LinearLayout
-                  android:id="@+id/card_bourse_yar"
-                  android:layout_width="0dp"
-                  android:layout_height="0dp"
-                  android:background="?attr/selectableItemBackground"
+                <LinearLayout
+                    android:id="@+id/card_bourse_yar"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="?attr/selectableItemBackground"
 
-                  android:gravity="center"
-                  android:orientation="vertical"
-                  app:layout_constraintBottom_toBottomOf="parent"
-                  app:layout_constraintEnd_toEndOf="parent"
-                  app:layout_constraintStart_toStartOf="parent"
-                  app:layout_constraintTop_toTopOf="parent">
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-                  <ImageView
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      app:srcCompat="@drawable/ic_bourse_yar" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_bourse_yar" />
 
-                  <TextView
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:layout_marginTop="8dp"
-                      android:text="بورس یار" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="بورس یار" />
 
-              </LinearLayout>
+                </LinearLayout>
 
-          </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
 
@@ -156,9 +165,9 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_margin="15sp"
+            android:layout_margin="10dp"
             app:cardCornerRadius="20sp"
-            app:cardElevation="8dp">
+            app:cardElevation="6dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -168,8 +177,8 @@
                     android:id="@+id/card_learn"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:clickable="true"
                     android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
                     android:gravity="center"
                     android:orientation="vertical"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -185,7 +194,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
                         android:text="آموزش" />
 
                 </LinearLayout>
@@ -199,23 +209,20 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_margin="15sp"
-
+            android:layout_margin="10dp"
             app:cardCornerRadius="20sp"
-            app:cardElevation="8dp">
+            app:cardElevation="6dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-
                 android:layout_height="match_parent">
 
                 <LinearLayout
                     android:id="@+id/card_register"
                     android:layout_width="0dp"
-                    android:clickable="true"
                     android:layout_height="0dp"
                     android:background="?attr/selectableItemBackground"
-
+                    android:clickable="true"
                     android:gravity="center"
                     android:orientation="vertical"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -229,9 +236,12 @@
                         app:srcCompat="@drawable/ic_register" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:layout_marginBottom="5dp"
                         android:text="ثبت نام در بورس" />
 
                 </LinearLayout>
@@ -245,9 +255,9 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_margin="15sp"
+            android:layout_margin="10dp"
             app:cardCornerRadius="20sp"
-            app:cardElevation="8dp">
+            app:cardElevation="6dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -274,7 +284,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
                         android:text="همکاری با ما" />
 
                 </LinearLayout>
@@ -288,10 +299,10 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_margin="15sp"
+            android:layout_margin="10dp"
 
             app:cardCornerRadius="20sp"
-            app:cardElevation="8dp">
+            app:cardElevation="6dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -318,7 +329,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
                         android:text="بورس کلاب" />
 
                 </LinearLayout>
@@ -332,9 +344,9 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_margin="15sp"
+            android:layout_margin="10dp"
             app:cardCornerRadius="20sp"
-            app:cardElevation="8dp">
+            app:cardElevation="6dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -361,7 +373,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
                         android:text="بورس مارکت" />
 
                 </LinearLayout>

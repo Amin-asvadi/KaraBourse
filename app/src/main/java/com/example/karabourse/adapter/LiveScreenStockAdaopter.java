@@ -1,4 +1,4 @@
-package com.example.karabourse.ui.home.adapter;
+package com.example.karabourse.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;

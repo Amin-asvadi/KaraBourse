@@ -4,19 +4,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBar;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.karabourse.R;
-import com.example.karabourse.ui.home.adapter.LiveScreenStockAdaopter;
+import com.example.karabourse.adapter.LiveScreenStockAdaopter;
 import com.example.karabourse.ui.home.model.LiveScreenStockModel;
 
 import java.util.ArrayList;
