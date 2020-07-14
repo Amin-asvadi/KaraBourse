@@ -3,12 +3,19 @@ package com.example.karabourse.ui.tabOrderFragment;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.karabourse.R;
+import com.example.karabourse.adapter.OrderProductAdapter;
+import com.example.karabourse.models.ProductModel;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +23,11 @@ import com.example.karabourse.R;
  * create an instance of this fragment.
  */
 public class FreeProductsFragment extends Fragment {
+	OrderProductAdapter orderProductAdapter;
+	List<ProductModel> productModelsitems;
+	RecyclerView rc_free_product;
+
+
 
 	// TODO: Rename parameter arguments, choose names that match
 	// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -61,6 +73,44 @@ public class FreeProductsFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 	                         Bundle savedInstanceState) {
 		// Inflate the layout for this fragment
-		return inflater.inflate(R.layout.fragment_free_products, container, false);
+		View root =	inflater.inflate(R.layout.fragment_free_products, container, false);
+
+		rc_free_product = root.findViewById(R.id.rc_free_product);
+		productModelsitems = new ArrayList<>();
+		productModelsitems.add(new ProductModel(R.drawable.clip_xxx, "آشنایی با بورس",
+				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
+		productModelsitems.add(new ProductModel(R.drawable.clip2_xxx, "آشنایی با بورس",
+				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
+		productModelsitems.add(new ProductModel(R.drawable.clip3_xxx, "آشنایی با بورس",
+				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
+		productModelsitems.add(new ProductModel(R.drawable.clip4_xxx, "آشنایی با بورس",
+				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
+		productModelsitems.add(new ProductModel(R.drawable.clip_xxx, "آشنایی با بورس",
+				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
+		productModelsitems.add(new ProductModel(R.drawable.clip2_xxx, "آشنایی با بورس",
+				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
+		productModelsitems.add(new ProductModel(R.drawable.clip3_xxx, "آشنایی با بورس",
+				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
+		productModelsitems.add(new ProductModel(R.drawable.clip4_xxx, "آشنایی با بورس",
+				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
+		productModelsitems.add(new ProductModel(R.drawable.clip1, "آشنایی با بورس",
+				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
+		productModelsitems.add(new ProductModel(R.drawable.clip2_xxx, "آشنایی با بورس",
+				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
+		productModelsitems.add(new ProductModel(R.drawable.clip3_xxx, "آشنایی با بورس",
+				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
+		productModelsitems.add(new ProductModel(R.drawable.clip4_xxx, "آشنایی با بورس",
+				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
+		productModelsitems.add(new ProductModel(R.drawable.clip1, "آشنایی با بورس",
+				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
+		productModelsitems.add(new ProductModel(R.drawable.clip2_xxx, "آشنایی با بورس",
+				"مدت دوره: سه جلسه 3 ساعته", 70000f, 4.5f));
+		orderProductAdapter = new OrderProductAdapter(productModelsitems, getContext());
+		LinearLayoutManager linearLayoutMan = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
+		rc_free_product.setLayoutManager(linearLayoutMan);
+		rc_free_product.setAdapter(orderProductAdapter);
+
+
+		return root;
 	}
 }
