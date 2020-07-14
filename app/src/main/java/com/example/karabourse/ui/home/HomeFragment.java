@@ -1,5 +1,6 @@
 package com.example.karabourse.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.karabourse.R;
 import com.example.karabourse.adapter.LiveScreenStockAdaopter;
 import com.example.karabourse.ui.home.model.LiveScreenStockModel;
+import com.example.karabourse.ui.mainPageActivity.RegisterStockActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,6 +60,7 @@ public class HomeFragment extends Fragment {
 		LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, true);
 		rc_Live_Screen.setLayoutManager(linearLayoutManager);
 		rc_Live_Screen.setAdapter(liveScreenStockAdaopter);
+
 
 
 		return root;
