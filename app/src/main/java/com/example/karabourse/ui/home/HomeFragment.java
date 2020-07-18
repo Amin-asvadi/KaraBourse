@@ -5,8 +5,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -23,12 +28,16 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment{
 
 	LiveScreenStockAdaopter liveScreenStockAdaopter;
 	List<LiveScreenStockModel> liveScreenStockModelsItems;
 	@BindView(R.id.live_screen)
 	RecyclerView rc_Live_Screen;
+ConstraintLayout cons_register;
+	LinearLayout card_register;
+	CardView card_register_bourse;
+
 
 	private HomeViewModel homeViewModel;
 
@@ -39,6 +48,9 @@ public class HomeFragment extends Fragment {
 		View root = inflater.inflate(R.layout.fragment_home, container, false);
 		ButterKnife.bind(this, root);
 
+		card_register = root.findViewById(R.id.card_register);
+		cons_register = root.findViewById(R.id.cons_register);
+		card_register_bourse = root.findViewById(R.id.card_register_bourse);
 
 		liveScreenStockModelsItems = new ArrayList<>();
 		liveScreenStockModelsItems.add(new LiveScreenStockModel("ذوب", 4.5f, 6346f, 7515f));
@@ -61,8 +73,15 @@ public class HomeFragment extends Fragment {
 		rc_Live_Screen.setLayoutManager(linearLayoutManager);
 		rc_Live_Screen.setAdapter(liveScreenStockAdaopter);
 
-
+		cons_register.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getContext(),RegisterStockActivity.class);
+				startActivity(intent);
+			}
+		});
 
 		return root;
 	}
+
 }
