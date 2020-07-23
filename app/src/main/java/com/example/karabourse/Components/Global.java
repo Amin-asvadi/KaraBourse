@@ -13,8 +13,11 @@ import android.os.StrictMode;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.GridLayoutManager;
 
 
@@ -40,7 +43,12 @@ public class Global extends Application {
     public static boolean add_user = false;
     public static Context context;
     public static ApplicationComponent applicationComponent;
-    public static AppModule appModule;
+    public static AppModule appModule;	ImageView img_product;
+    TextView title;
+    TextView limite_of_course;
+    TextView price;
+    TextView rate;
+    CardView cons_product_item;
     private NetComponent mNetComponent;
     private ClsSharedPreference sharedPreference;
 

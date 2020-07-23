@@ -14,4 +14,12 @@
     <string name="accessoires">ابزار</string>
     <string name="free_products">محصولات رایگان</string>
     <string name="librally">کتابخانه</string>
+    <string name="phone_number">شماره تلفن</string>
+    <string name="input_email">ایمیل</string>
+    <string name="saft_code">کد امنیتی</string>
+    <string name="national_Cod">کد ملی</string>
+    <string name="name">نام</string>
+    <string name="password">رمز عبور</string>
+    <string name="repeat_pass">تکرار رمز عبور</string>
+    <string name="family_name">نام خانوادگی</string>
 </resources>
